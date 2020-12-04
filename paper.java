@@ -5,19 +5,20 @@
 					IT 19118034
 					NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR
 */
+import java.lang.*;
 import java.awt.*;
 import java.awt.event.*;
 public class paper extends WindowAdapter {
 	Button b1;
 	TextField t1,t2,t3;
 	Frame f;
-	List l =new List(6,false);
+	List l =new List(8,false);
 	paper(){
 	b1=new Button("Calculate");
 	t1=new TextField();
 	t2=new TextField();
 	t3 =new TextField();
-	 f=new Frame();
+	f=new Frame();
 	f.setVisible(true);
 	f.setLayout(null);
 	f.setSize(500,500);
@@ -26,7 +27,8 @@ public class paper extends WindowAdapter {
 	l.add("/");
 	l.add("FACT");
 	l.add("FIB");
-	
+	l.add("POW");
+	l.add("LOG");
 	final Label l1=new Label("CALCULATOR");
 	l1.setAlignment(Label.CENTER);
 	l1.setSize(500,100);
@@ -40,7 +42,7 @@ public class paper extends WindowAdapter {
 	t2.setBounds(100,150,150,20);
 	t3.setBounds(100,250,150,20);
 	b1.setBounds(200,400,50,50);
-	l.setBounds(100,300,50,100);
+	l.setBounds(100,300,50,150);
 	f.add(t1);f.add(t2);f.add(t3);f.add(b1);f.add(l1);f.add(l);
 	f.add(l2);f.addWindowListener(this);
 	b1.addActionListener(new ActionListener(){
@@ -107,7 +109,19 @@ public class paper extends WindowAdapter {
 						t3.setText(s1);
 						break;
 						}
-		
+			case "POW": String s2=t2.getText();
+						int y =Integer.parseInt(s2);
+						Double r=1.0;
+						while(y>0)
+						{r*=x;--y;}
+						s1=Double.toString(r);
+						t3.setText(s1);
+						break;
+			case "LOG":	x=Math.log(x);
+						s1=Double.toString(x);
+						t3.setText(s1);
+						break;
+			
 			}
 		}
 		
@@ -122,4 +136,6 @@ public class paper extends WindowAdapter {
 		new paper();
 	}
 }
-	
+/*we have to add some general instruction in the calculatethey are first to enter which num to calculate fib fact and log and how to enter no for power
+also we have to mention that the log is of e base not 10;
+*/
