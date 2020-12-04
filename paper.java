@@ -1,3 +1,10 @@
+/* This is a specially designed calcultor which is based on JAVA AWT and EVENT class.
+	This calculator can calculate Fibonacci and Factorials of any number .
+	This make this calculator separate from others
+	This is made by 		HARSH KUMAR CHOUDHARY
+					IT 19118034
+					NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR
+*/
 import java.awt.*;
 import java.awt.event.*;
 public class paper extends WindowAdapter {
