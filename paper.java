@@ -111,7 +111,7 @@ public class paper extends WindowAdapter {
 			}
 		}
 		
-	}
+	
 	});
 	
 	}
