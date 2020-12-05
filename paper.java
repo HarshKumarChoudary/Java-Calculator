@@ -12,13 +12,17 @@ public class paper extends WindowAdapter {
 	Button b1;
 	TextField t1,t2,t3;
 	Frame f;
-	List l =new List(8,false);
+	List l =new List(9,false);
 	paper(){
 	b1=new Button("Calculate");
 	t1=new TextField();
 	t2=new TextField();
 	t3 =new TextField();
-	f=new Frame();
+	Label ll=new Label("use only first number for fib ,log, fact and Prime.Here Log is natural log");
+	
+	ll.setBounds(50,200,450,50);
+	f=new Frame("CALCULATOR");
+	
 	f.setVisible(true);
 	f.setLayout(null);
 	f.setSize(500,500);
@@ -29,6 +33,7 @@ public class paper extends WindowAdapter {
 	l.add("FIB");
 	l.add("POW");
 	l.add("LOG");
+	l.add("PRIME");
 	final Label l1=new Label("CALCULATOR");
 	l1.setAlignment(Label.CENTER);
 	l1.setSize(500,100);
@@ -38,7 +43,7 @@ public class paper extends WindowAdapter {
 	l3.setBounds(300,150,80,20);
 	final Label l4=new Label("result");
 	l4.setBounds(300,250,70,20);
-	f.add(l3);f.add(l4);	t1.setBounds(100,100,150,20);
+	f.add(l3);f.add(l4);f.add(ll);	t1.setBounds(100,100,150,20);
 	t2.setBounds(100,150,150,20);
 	t3.setBounds(100,250,150,20);
 	b1.setBounds(200,400,50,50);
@@ -122,6 +127,19 @@ public class paper extends WindowAdapter {
 						t3.setText(s1);
 						break;
 			
+			case "PRIME":	int ok=0;
+							if(x!=1||x!=2)
+							for(int i=2;i<x;++i)
+							{if(x%i==0){ok=1;break;}}
+							if(x==2||ok==0)
+								s1="YES";
+							else
+								s1="NO";
+							if(x==1)
+								s1="NO";
+							t3.setText(s1);
+							break;
+								
 			}
 		}
 		
@@ -136,6 +154,3 @@ public class paper extends WindowAdapter {
 		new paper();
 	}
 }
-/*we have to add some general instruction in the calculatethey are first to enter which num to calculate fib fact and log and how to enter no for power
-also we have to mention that the log is of e base not 10;
-*/
