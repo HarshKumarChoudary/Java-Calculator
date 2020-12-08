@@ -41,7 +41,7 @@
 import java.lang.*;
 import java.awt.*;
 import java.awt.event.*;
-public class paper extends WindowAdapter {
+public class calculator extends WindowAdapter {
 	
 	//Declarations of components in container : Button,TextFields and frame and list.
 	// Labels are also declared 
@@ -58,7 +58,7 @@ public class paper extends WindowAdapter {
 	
 	//counstructor of class;
 	
-	paper(){
+	calculator(){
 		// initialization of all fields
 		b1=new Button("Calculate");
 		t1=new TextField();
@@ -374,7 +374,7 @@ public class paper extends WindowAdapter {
 	
 	// main method to run the instance of the calculator
 	public static void main(String[] args){
-		new paper();
+		new calculator();
 	}
 	//end
 }
