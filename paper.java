@@ -223,12 +223,11 @@ public class calculator extends WindowAdapter {
 											break;
 										}
 									//NTHROOT finding code
-							case "NThROOT":{
+							case "NTHROOT":{
 								        Double y=  Double.parseDouble(t2.getText());
 										x=Math.log(x);
 										x/=y;
 										x=Math.pow(2.718281828,x);
-										x=Math.ceil(x);
 										s1=Double.toString(x);
 										t3.setText(s1);
 										break;}
