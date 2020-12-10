@@ -50,7 +50,7 @@ public class calculator extends WindowAdapter {
 	TextField t1,t2,t3;
 	Frame f;
 	List l =new List(18,false);
-	Label label2=new Label("use only first number for fib ,log, fact and Prime.Here Log is natural log");
+	Label label2=new Label("See instructions in code for using single number operations");
 	Label l1=new Label("CALCULATOR");
 	Label label5=new Label("firstnumber");
 	Label label3 =new Label("secondnumber");
