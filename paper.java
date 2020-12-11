@@ -188,7 +188,7 @@ public class calculator extends WindowAdapter {
 										// code for finding the fibonacci number upto given term and display
 							case "FIB": {
 										int a=0,b=1;
-										int y=0;;
+										int y=0;
 										for(int i=1;i<x;++i)
 										{y=a+b;b=a;a=y;}
 										s1=Integer.toString(y);
